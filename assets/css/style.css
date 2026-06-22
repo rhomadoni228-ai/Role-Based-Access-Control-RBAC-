@@ -1,0 +1,213 @@
+/* =====================================================
+   assets/css/style.css
+   CLEAN VERSION
+   TANPA CSS header, footer, navbar, sidebar
+   ===================================================== */
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+/* =====================================================
+   WRAPPER / CONTENT
+   ===================================================== */
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    padding:22px;
+}
+
+/* =====================================================
+   CARD
+   ===================================================== */
+.card{
+    background:#fff;
+    padding:22px;
+    border-radius:16px;
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+    margin-bottom:20px;
+}
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+.table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.table th{
+    background:#2563eb;
+    color:#fff;
+    padding:12px;
+    text-align:left;
+}
+
+.table td{
+    padding:12px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.table tr:hover{
+    background:#f8fafc;
+}
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+.btn{
+    display:inline-block;
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:14px;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-danger{
+    background:#dc2626;
+    color:#fff;
+}
+
+.btn-danger:hover{
+    background:#b91c1c;
+}
+
+.btn-success{
+    background:#16a34a;
+    color:#fff;
+}
+
+.btn-success:hover{
+    background:#15803d;
+}
+
+.btn-warning{
+    background:#f59e0b;
+    color:#fff;
+}
+
+.btn-warning:hover{
+    background:#d97706;
+}
+
+/* =====================================================
+   FORM
+   ===================================================== */
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:600;
+}
+
+.form-control{
+    width:100%;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    outline:none;
+}
+
+.form-control:focus{
+    border-color:#2563eb;
+}
+
+/* =====================================================
+   ALERT
+   ===================================================== */
+.alert{
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.alert-success{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.alert-danger{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.alert-warning{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+/* =====================================================
+   LOGIN LOGO
+   ===================================================== */
+.logo-img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media(max-width:768px){
+
+    .wrapper{
+        flex-direction:column;
+    }
+
+    .content{
+        padding:15px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .btn{
+        font-size:13px;
+        padding:9px 12px;
+    }
+}
