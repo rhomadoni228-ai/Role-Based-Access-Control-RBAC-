@@ -1,7 +1,6 @@
-<?php
-// ======================================================
-// mahasiswa/dashboard.php
-// ======================================================
+$page_title = 'Dashboard Mahasiswa | RBAC Secure System';
+$page_heading = 'Dashboard Mahasiswa';
+
 include '../includes/header.php';
 include '../includes/sidebar.php';
 include '../includes/navbar.php';
@@ -21,24 +20,43 @@ $q = mysqli_query($conn,"
 $d = mysqli_fetch_assoc($q);
 ?>
 
-<div class="card">
-    <h2>Dashboard Mahasiswa</h2>
-    <p>Selamat datang <b><?= $_SESSION['nama']; ?></b></p>
-</div>
+<section class="dashboard-hero">
+    <div>
+        <span class="hero-badge">Panel Mahasiswa</span>
+        <h2>Selamat datang, <?= htmlspecialchars($_SESSION['nama']); ?></h2>
+        <p>Lihat ringkasan akademik, nilai mata kuliah, dan informasi profil Anda.</p>
+    </div>
+    <div class="hero-icon">
+        <i class="fas fa-user-graduate"></i>
+    </div>
+</section>
 
-<div class="card">
-    <h4>Informasi Akademik</h4>
-    <p>Total Mata Kuliah Dinilai :
-        <b><?= $d['total']; ?></b>
-    </p>
-</div>
+<section class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon blue"><i class="fas fa-book-open"></i></div>
+        <div>
+            <span>Mata Kuliah Dinilai</span>
+            <strong><?= $d['total']; ?></strong>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon green"><i class="fas fa-user-check"></i></div>
+        <div>
+            <span>Status Akses</span>
+            <strong>Aktif</strong>
+        </div>
+    </div>
+</section>
 
-<div class="card">
-    <h4>Akses Cepat</h4>
-    <p>
-        <a href="nilai.php" class="btn btn-primary">Lihat Nilai</a>
-        <a href="profil.php" class="btn btn-success">Profil Saya</a>
-    </p>
-</div>
+<section class="card action-panel">
+    <div>
+        <h3>Akses Cepat</h3>
+        <p>Buka nilai akademik dan data profil pribadi Anda.</p>
+    </div>
+    <div class="action-buttons">
+        <a href="nilai.php" class="btn btn-primary"><i class="fas fa-chart-line"></i> Lihat Nilai</a>
+        <a href="profil.php" class="btn btn-success"><i class="fas fa-id-card"></i> Profil Saya</a>
+    </div>
+</section>
 
 <?php include '../includes/footer.php'; ?>
